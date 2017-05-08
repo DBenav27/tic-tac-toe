@@ -1,8 +1,86 @@
 #board {
-  margin-top: 10px;
+  margin-top: 0px;
+}
+
+body {
+  background: url(http://content.wallpapers-room.com/resolutions/1440x900/W/Wallpapers-room_com___Woody_by_PrekeshC_1440x900.png);
+}
+
+.sig {
+  height: 128px;
+  width: 52%;
+  margin-top: 12px;
 }
 
 .box {
   border: 1px solid black;
   height: 150px;
+  padding: 0;
+  width: 150px;
+}
+
+.box1 {
+  border-right: 10px solid black;
+  border-bottom: 10px solid black;
+  border-left: 0px;
+  border-top: 0px;
+}
+
+.box2 {
+  border-top: 0px;
+  border-bottom: 10px solid black;
+}
+
+.box3 {
+  border-right: 0px;
+  border-bottom: 10px solid black;
+  border-left: 10px solid black;
+  border-top: 0px;
+}
+.box4{
+  border-left:0px;
+  border-right:10px solid black;
+}
+.box5{
+}
+.box6{
+  border-right: 0px;
+  border-left: 10px solid black;
+}
+.box7{
+  border-top: 10px solid black;
+  border-left: 0px;
+  border-bottom: 0px;
+  border-right: 10px solid black;
+}
+.box8{
+  border-bottom: 0px;
+  border-top:10px solid black;
+  border-right: 10px sold black;
+}
+.box9{
+  border-bottom: 0px;
+  border-left: 10px solid black;
+  border-right: 0px;
+  border-top: 10px solid black;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  margin-top: 54px;
+}
+
+.X {
+  background-image: url(https://img.clipartfest.com/27038b9d6817e8edbb6dd7f909ca3fd6_red-x-painting-illustration-red-x-clipart_508-339.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 223px;
+}
+
+.O {
+  background-image: url(http://graffitialphabet.org/letter-o/crazy-graffiti-alphabet-o.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 184px;
 }
