@@ -6,12 +6,12 @@ $(document).ready(function() {
   var currentPlayer = "X";
   var firstPlayer = "X";
   var secondPlayer = "O";
-
+  var totalMoves = 0;
 
 
   function winConditions() {
 
-//For Vertical Wins
+    //For Vertical Wins
     if (($('#box1').hasClass('X') && $('#box2').hasClass('X')) && $('#box3').hasClass('X')) {
       alert('X wins!');
     } else if (($('#box1').hasClass('O') && $('#box2').hasClass('O')) && $('#box3').hasClass('O')) {
@@ -24,7 +24,7 @@ $(document).ready(function() {
       alert('X wins!');
     } else if (($('#box7').hasClass('O') && $('#box8').hasClass('O')) && $('#box9').hasClass('O')) {
       alert('O wins!');
-//For Horizonal Wins
+      //For Horizonal Wins
     } else if (($('#box1').hasClass('X') && $('#box4').hasClass('X')) && $('#box7').hasClass('X')) {
       alert('X wins!');
     } else if (($('#box1').hasClass('O') && $('#box4').hasClass('O')) && $('#box7').hasClass('O')) {
@@ -37,7 +37,7 @@ $(document).ready(function() {
       alert('X wins!');
     } else if (($('#box3').hasClass('O') && $('#box6').hasClass('O')) && $('#box9').hasClass('O')) {
       alert('O wins!');
-//Diagonal Wins
+      //Diagonal Wins
     } else if (($('#box1').hasClass('X') && $('#box5').hasClass('X')) && $('#box9').hasClass('X')) {
       alert('X wins!');
     } else if (($('#box1').hasClass('O') && $('#box5').hasClass('O')) && $('#box9').hasClass('O')) {
@@ -46,13 +46,15 @@ $(document).ready(function() {
       alert('X wins!');
     } else if (($('#box3').hasClass('O') && $('#box5').hasClass('O')) && $('#box7').hasClass('O')) {
       alert('O wins!');
+//Draw
+    } else if (totalMoves === 9) {
+      alert('It is a draw!');
     }
   }
-
-//Click Function
+  //Click Function
   $('.col-md-4').click(function() {
     console.log(currentPlayer);
-//Box is claimed
+    //Box is claimed
     if ($(this).hasClass('X') || $(this).hasClass('O')) {
       alert("This tile is already filled!");
     } else {
@@ -61,21 +63,21 @@ $(document).ready(function() {
       winConditions();
     }
     //Switching Player
-      function switchPlayer() {
-        if (currentPlayer === "X") {
-          currentPlayer = secondPlayer;
-        } else {
-          currentPlayer = firstPlayer;
-        }
+    function switchPlayer() {
+      if (currentPlayer === "X") {
+        currentPlayer = secondPlayer;
+      } else {
+        currentPlayer = firstPlayer;
       }
+      totalMoves++;
+    }
 
 
   });
-//Reset moves
+  //Reset moves
   $('.reset').click(function() {
     $('.col-md-4').removeClass("X");
     $('.col-md-4').removeClass("O");
+    totalMoves = 0;
   });
-
-
 });

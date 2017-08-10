@@ -79,7 +79,7 @@ h1 {
 }
 
 .O {
-  background-image: url(http://graffitialphabet.org/letter-o/crazy-graffiti-alphabet-o.jpg);
+  background-image: url("http://graffitialphabet.org/letter-o/crazy-graffiti-alphabet-o.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 184px;
