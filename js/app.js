@@ -48,7 +48,7 @@ $(document).ready(function() {
       alert('O wins!');
 //Draw
     } else if (totalMoves === 9) {
-      alert('It is a draw!');
+      alert('It is a tie!');
     }
   }
   //Click Function
